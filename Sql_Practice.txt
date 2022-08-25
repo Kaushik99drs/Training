@@ -1,0 +1,12 @@
+select ord.ord_no, ord.purch_amt, cust.customer_id, cust.cust_name 
+from Order as ord 
+inner join customer as cust
+           on ord.customer_id=cust.customer_id
+where ord.purch_amt between 500 and 2000;
+
+select c.cust_name, c.city, s.name, s.commission
+from customer as c
+inner join salesman as s
+           on c.salesman_id=s.salesman_id
+where s.commission > 0.12;
+
